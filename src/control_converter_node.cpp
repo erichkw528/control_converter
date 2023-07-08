@@ -50,10 +50,10 @@ namespace control_converter
     void ControlConverterNode::onLatestAckermannRcvd(const ackermann_msgs::msg::AckermannDriveStamped::SharedPtr msg)
     {
         roar_msgs::msg::EgoVehicleControl ego_vehicle_msg = roar_msgs::msg::EgoVehicleControl();
-        ego_vehicle_msg.throttle = msg->drive.jerk;
-        ego_vehicle_msg.steer = msg->drive.steering_angle_velocity;
-        ego_vehicle_msg.brake = msg->drive.speed == 0;
-        ego_vehicle_msg.reverse = msg->drive.acceleration < 0;
+        // ego_vehicle_msg.throttle = msg->drive.jerk;
+        // ego_vehicle_msg.steer = msg->drive.steering_angle_velocity;
+        // ego_vehicle_msg.brake = msg->drive.speed == 0;
+        // ego_vehicle_msg.reverse = msg->drive.acceleration < 0;
         this->control_publisher_->publish(ego_vehicle_msg);
     }
 
