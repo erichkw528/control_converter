@@ -9,7 +9,7 @@ find_package(nav_2d_utils REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(nav2_core REQUIRED)
 find_package(nav2_common REQUIRED)
-find_package(roar_msgs REQUIRED)
+find_package(roar_gokart_msgs REQUIRED)
 find_package(control_msgs REQUIRED)
 find_package(ackermann_msgs REQUIRED)
 include_directories(
@@ -22,7 +22,7 @@ set(dependencies
   nav2_msgs
   nav2_util
   nav2_core
-  roar_msgs
+  roar_gokart_msgs
   control_msgs
   ackermann_msgs
 )

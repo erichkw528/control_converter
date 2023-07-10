@@ -2,7 +2,7 @@
 #define CONTROL_CONVERTER_NODE_HPP_
 #include "nav2_util/lifecycle_node.hpp"
 #include "control_msgs/msg/pid_state.hpp"
-#include "roar_msgs/msg/ego_vehicle_control.hpp"
+#include "roar_gokart_msgs/msg/ego_vehicle_control.hpp"
 #include <ackermann_msgs/msg/ackermann_drive_stamped.hpp>
 namespace control_converter
 {
@@ -31,7 +31,7 @@ namespace control_converter
         }
         float ackermann_to_carla_steering(float ackermann_steering);
 
-        rclcpp::Publisher<roar_msgs::msg::EgoVehicleControl>::SharedPtr control_publisher_;
+        rclcpp::Publisher<roar_gokart_msgs::msg::EgoVehicleControl>::SharedPtr control_publisher_;
         rclcpp::Subscription<ackermann_msgs::msg::AckermannDriveStamped>::SharedPtr ackermann_sub_;
 
         float GOKART_MAX_RIGHT_STEERING = 1.0;

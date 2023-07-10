@@ -49,7 +49,7 @@ namespace control_converter
 
     void ControlConverterNode::onLatestAckermannRcvd(const ackermann_msgs::msg::AckermannDriveStamped::SharedPtr msg)
     {
-        roar_msgs::msg::EgoVehicleControl ego_vehicle_msg = roar_msgs::msg::EgoVehicleControl();
+        roar_gokart_msgs::msg::EgoVehicleControl ego_vehicle_msg = roar_gokart_msgs::msg::EgoVehicleControl();
         // ego_vehicle_msg.throttle = msg->drive.jerk;
         // ego_vehicle_msg.steer = msg->drive.steering_angle_velocity;
         // ego_vehicle_msg.brake = msg->drive.speed == 0;
